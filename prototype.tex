@@ -28,7 +28,7 @@
     {\LARGE\textbf{Système de prévision et d’alerte de la pollution atmosphérique}}\\[1cm]
     {\large Par}\\[0.5cm]
     {\large DAOUDI Mohamed Raouf}\\
-    {\large et BOUROUIS Abdel Djalil}\\[1cm]
+    {\large et BOUROUIS Abdeldjalil}\\[1cm]
     {\large Mémoire présenté à}\\
     {\large Université d'Alger 1}\\[1cm]
     {\large Pour l'obtention du}\\
@@ -50,7 +50,7 @@
     {\LARGE\textbf{Système de prévision et d’alerte de la pollution atmosphérique}}\\[1cm]
     {\large Par}\\[0.5cm]
     {\large DAOUDI Mohamed Raouf}\\
-    {\large et BOUROUIS Abdel Djalil}\\[1cm]
+    {\large et BOUROUIS Abdeldjalil}\\[1cm]
     {\large Mémoire présenté à}\\
     {\large Université d'Alger 1}\\[1cm]
     {\large Pour l'obtention du}\\
@@ -96,13 +96,67 @@ La pollution atmosphérique est l’un des défis environnementaux les plus pres
 Face à ces enjeux, il devient impératif de disposer de systèmes robustes capables de prédire avec précision les épisodes de pollution et d’informer les populations à risque. L’intégration de l’intelligence artificielle, et plus spécifiquement de l’apprentissage profond, ouvre de nouvelles perspectives pour l’analyse de données environnementales complexes et la prévision en temps réel de la qualité de l’air. Les capacités de ces modèles à apprendre et à détecter des motifs subtils permettent de dépasser les limitations des approches traditionnelles.
 
 Dans ce contexte, ce travail de recherche vise à développer un système de prévision et d’alerte de la pollution atmosphérique, en s’appuyant sur des algorithmes d’apprentissage profond pour analyser de grandes quantités de données et générer des alertes précoces. Ce système ambitionne de réduire les impacts sanitaires et environnementaux en permettant une meilleure anticipation des épisodes de pollution et une prise de décision éclairée par les autorités et les citoyens. Les résultats obtenus contribueront à renforcer la lutte contre la pollution atmosphérique en proposant une solution technologique avancée adaptée aux défis actuels.
-
+\subsection{Analyse des sources et impacts de la pollution}
+La pollution atmosphérique résulte d'une interaction complexe entre différentes sources, causes et conséquences. Le tableau suivant présente une synthèse des principaux facteurs et leurs impacts :
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{pollution.png}
     \caption{Pollution}
     \label{fig:Pollution}
 \end{figure}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+    \hline
+    \textbf{Source} & \textbf{Causes} & \textbf{Conséquences} \\
+    \hline
+    Zones industrielles & Émissions de gaz toxiques & Maladies respiratoires chroniques \\
+    \hline
+    Zones urbaines & Trafic routier intense & Problèmes cardiovasculaires \\
+    \hline
+    Zones agricoles & Usage excessif de pesticides & Contamination des sols et de l'eau \\
+    \hline
+    Centrales électriques & Combustion de charbon/pétrole & Pluies acides et smog \\
+    \hline
+    Zones résidentielles & Chauffage domestique & Pollution de l'air intérieur \\
+    \hline
+    Zones portuaires & Transport maritime & Pollution côtière et marine \\
+    \hline
+    Sites miniers & Extraction de minerais & Dégradation des écosystèmes \\
+    \hline
+    Décharges & Incinération des déchets & Contamination atmosphérique \\
+    \hline
+    \end{tabular}
+    \caption{Sources, causes et conséquences de la pollution atmosphérique}
+    \label{tab:pollution}
+    \end{table}
+\subsection{Intelligence Artificielle et Apprentissage Profond}
+L'Intelligence Artificielle (IA), définie par \cite{Russell2010}, est la science qui permet aux machines d'imiter le comportement intelligent humain. L'apprentissage profond, une branche de l'IA, utilise des réseaux de neurones artificiels multicouches définis par l'équation :
+
+\begin{equation}
+    h_{\theta}(x) = f(\sum_{i=1}^{n} w_i x_i + b)
+\end{equation}
+
+où $f$ représente la fonction d'activation, $w_i$ les poids, $x_i$ les entrées et $b$ le biais \cite{Goodfellow2016}.
+\subsection{Applications de l'IA et de l'Apprentissage Profond}
+Les domaines d'application de l'IA et de l'apprentissage profond sont vastes et incluent notamment :
+\begin{itemize}
+    \item La vision par ordinateur avec les réseaux CNN \cite{LeCun2015}
+    \item Le traitement du langage naturel via les architectures Transformer
+    \item L'analyse prédictive des séries temporelles
+    \item La détection d'anomalies environnementales
+\end{itemize}
+
+Dans le contexte de la pollution atmosphérique, ces technologies permettent d'établir des modèles prédictifs complexes exprimés par :
+
+\begin{equation}
+    P(t+1) = F(P(t), M(t), E(t))
+\end{equation}
+
+où $P(t)$ représente le niveau de pollution au temps $t$, $M(t)$ les conditions météorologiques et $E(t)$ les facteurs environnementaux \cite{Zhang2020}.
+
+
 
 % Développement
 \chapter{LE REVUE DE LITTÉRATURES}
@@ -116,7 +170,7 @@ Ce travail contribue de manière significative à la littérature en comblant le
     \centering
     \includegraphics[width=0.8\textwidth]{diagram1.png}
     \caption{Diagram proposé par BINBUSAYYIS}
-    \label{fig:Pollution}
+    \label{fig:Diagram}
 \end{figure}
 
 \chapter{CONSIDÉRATIONS MÉTHOLOGIQUES}
@@ -156,9 +210,8 @@ Ce travail contribue de manière significative à la littérature en comblant le
 \newpage
 \phantomsection
 \addcontentsline{toc}{chapter}{BIBLIOGRAPHIE}
-\begin{thebibliography}{99}
-\bibitem{source1} BINBUSAYYIS, Adel, KHAN, Muhammad Attique, et EMMANUEL, W. R. \textit{A deep learning approach for prediction of air quality index in smart city}. Discover Sustainability, 2024, vol. 5, no 1, p. 1-23.
-\end{thebibliography}
+\bibliographystyle{plain}
+\bibliography{references}
 
 % Annexes
 \appendix
