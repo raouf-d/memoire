@@ -8,7 +8,8 @@
 \usepackage{makeidx}
 \usepackage{tocloft}
 \usepackage{xcolor}
-
+\usepackage{listings}
+\usepackage{verbatim}
 % Configuration des liens hypertexte
 \hypersetup{
     colorlinks=true,
@@ -294,7 +295,29 @@ La problématique centrale est le développement d'un système capable de :
 \appendix
 \chapter*{ANNEXES}
 \addcontentsline{toc}{chapter}{ANNEXES}
-\lipsum[8]
+\section{Architecture du modèle}
+\begin{lstlisting}
+model = Sequential([
+    Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)),
+    MaxPooling2D((2, 2)),
+    Conv2D(64, (3, 3), activation='relu'),
+    Flatten(),
+    Dense(64, activation='relu'),
+    Dense(10, activation='softmax')
+])
+\end{lstlisting}
+
+\section{Documentation API}
+\begin{verbatim}
+GET /api/v1/pollution/predict
+Parameters:
+  - latitude: float
+  - longitude: float
+  - timestamp: datetime
+Returns:
+  - prediction: float
+  - confidence: float
+\end{verbatim}
 
 % Page blanche finale
 \newpage
