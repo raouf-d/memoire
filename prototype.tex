@@ -8,8 +8,7 @@
 \usepackage{makeidx}
 \usepackage{tocloft}
 \usepackage{xcolor}
-\usepackage{listings}
-\usepackage{verbatim}
+
 % Configuration des liens hypertexte
 \hypersetup{
     colorlinks=true,
@@ -25,7 +24,6 @@
 % Première page de titre
 \begin{titlepage}
 \begin{center}
-    % Logo de l'université (ajuster le chemin du fichier image)
     \includegraphics[width=0.2\textwidth]{logo_universite.png}\\[1cm]
     
     {\Large \textbf{RÉPUBLIQUE ALGÉRIENNE DÉMOCRATIQUE ET POPULAIRE}}\\[0.5cm]
@@ -47,7 +45,7 @@
     \textbf{Encadré par :}\\
     {\large Dr. BELATTAR Khadidja}\\[1cm]
     
-    {\large 2024-2025}
+    {\large 2024 - 2025}
 \end{center}
 \end{titlepage}
 
@@ -60,7 +58,6 @@
 \newpage
 \begin{titlepage}
 \begin{center}
-    % Logo de l'université (ajuster le chemin du fichier image)
     \includegraphics[width=0.2\textwidth]{logo_universite.png}\\[1cm]
     
     {\Large \textbf{RÉPUBLIQUE ALGÉRIENNE DÉMOCRATIQUE ET POPULAIRE}}\\[0.5cm]
@@ -82,7 +79,7 @@
     \textbf{Encadré par :}\\
     {\large Dr. BELATTAR Khadidja}\\[1cm]
     
-    {\large 2024-2025}
+    {\large 2024 - 2025}
 \end{center}
 \end{titlepage}
 
@@ -240,11 +237,10 @@ La configuration matérielle utilisée :
 \end{itemize}
 
 \section{Problématique et Motivation}
-La problématique centrale est le développement d'un système capable de :
+La problématique centrale est le développement d'un système capable de:
 \begin{itemize}
     \item Prédire les niveaux de pollution avec précision
     \item Générer des alertes en temps réel
-    \item Fournir des recommandations adaptées
 \end{itemize}
 
 \chapter{LA DISCUSSION DES RÉSULTATS}
@@ -295,29 +291,7 @@ La problématique centrale est le développement d'un système capable de :
 \appendix
 \chapter*{ANNEXES}
 \addcontentsline{toc}{chapter}{ANNEXES}
-\section{Architecture du modèle}
-\begin{lstlisting}
-model = Sequential([
-    Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)),
-    MaxPooling2D((2, 2)),
-    Conv2D(64, (3, 3), activation='relu'),
-    Flatten(),
-    Dense(64, activation='relu'),
-    Dense(10, activation='softmax')
-])
-\end{lstlisting}
-
-\section{Documentation API}
-\begin{verbatim}
-GET /api/v1/pollution/predict
-Parameters:
-  - latitude: float
-  - longitude: float
-  - timestamp: datetime
-Returns:
-  - prediction: float
-  - confidence: float
-\end{verbatim}
+\lipsum[8]
 
 % Page blanche finale
 \newpage
